@@ -11,25 +11,25 @@ Find the difference between the sum of the squares of the first one hundred natu
     */
 public class Q6 {
 
+	static int Sq(int num){ 
+		  
+		int a, b, c; 
+		    
+		    a = (num * (num + 1) * (2 * num + 1)) / 6; 
+		         
+		    b = (num * (num + 1)) / 2; 
+		    b = b * b; 
+		      
+		    c = Math.abs(a - b); 
+		      
+		    return c; 
+		  
+		} 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
     
-		int sum1 = 0,sum2 = 0,sum = 0;
-		
-		for(int i=1;i<=100;i++)
-		{
-			sum1 = sum1 + (i*i);
-			
-			sum2 = sum2 + (i);
-			sum = sum2*sum2;
-			
-		}
-     int k = sum - sum1;
-     
-       System.out.println(sum1);
-         System.out.println(sum);
-     
-     System.out.println(" diff. is : " + k);
-		
-	}
+		 int n = 100; 
+		    System.out.println(Sq(n));   
+	
+}
 }

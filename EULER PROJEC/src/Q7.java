@@ -10,19 +10,18 @@ public class Q7 {
 
 	public static boolean isprime(long n)
 	{
-		 int c=0;
-       
-         long sq = (long) Math.sqrt(n);
-         for(long i =1;i<= sq;i++)
-         {
-        	 if(n%i == 0)
-        		 c++;
-        	 
-        	 if(c>1)
-        		 return false;
-        		 
-         }
-         return true;
+		if(n<2){
+			return false;}
+		
+		else if(n == 2){
+			return true;}
+		
+		for(int i = 2;i< Math.pow(n,0.5)+1;i++)
+		{
+			if(n%i == 0)
+				return false;
+		}
+		return true;
 	}
 	public static  long problem(long l)
 	{

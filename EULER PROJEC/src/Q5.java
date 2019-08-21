@@ -9,11 +9,11 @@ public class Q5 {
 	{
 		boolean f = false;
 		
-		for(int n1 = 6; !f ; n1++)
+		for(int n1 = 1; !f ; n1++)
 		{
 			boolean e = true;
 			
-			for(int j = 4;j<=n;j++)
+			for(int j = 1;j<=n;j++)
 			{
 				if(n1%j != 0)
 				{
