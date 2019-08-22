@@ -3,39 +3,36 @@
 
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
     */
+
 public class Q5 {
 
-	public void divisible(int n)
-	{
-		boolean f = false;
-		
-		for(int n1 = 1; !f ; n1++)
-		{
-			boolean e = true;
-			
-			for(int j = 1;j<=n;j++)
-			{
-				if(n1%j != 0)
-				{
-					e = false;
-				}
-			}
-			if(e)
-			{
-				System.out.println(n1);
-				f = true;
-			}
-			
-		}
-	}
+	   public static int gcd(int a, int b) 
+	   {
+	        while (b != 0) 
+	        {
+	            int temp = a;
+	            a = b;
+	            b = temp % b;
+	        }
+	        return a;
+	    } 
+	      
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Q5 p = new Q5();
+		int r = 1;
 		
-		p.divisible(20);
-		
-	}
+        for (int i = 1; i<21; i++)
+        {
+            int c = gcd(i, r);
+            
+            r = r / c * i;
+        }
+        System.out.println(r);
+    }
+
+	
 
 }
+	
