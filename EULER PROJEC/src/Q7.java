@@ -10,25 +10,22 @@ public class Q7 {
 
 	public static boolean isprime(long n)
 	{
-		 int c=0;
-	 
-         for(long i =1;i<= Math.sqrt(n);i++)
-         {
-        	 if(n%i == 0)
-        		 c++;
-        	 
-        	 if(c>1)
-        		 return false;
-        		 
-         }
-         return true;
+		boolean f = true;
+		if(n%2==0)
+			return false;
+		for(long i=3;i*i<=n;i=i+2)
+		{
+			if(n%i==0)
+				return false;
+		}
+		return f;
 	}
 	public static  long problem(long l)
 	{
 		long c1 = 0;
 		long res = 0;
 		
-		for(long x= 2;c1 <= l;x++)
+		for(long x= 1;c1 <= l;x++)
 		{
 			if(isprime(x))
 			{
