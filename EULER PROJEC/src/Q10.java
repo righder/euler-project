@@ -22,12 +22,15 @@ public class Q10 {
 	}
 	 static boolean isPrime(int n)
 	 {
-		 
-			for(int i = 2;i< Math.pow(n,0.5)+1;i++)
-			{
-				if(n%i == 0)
-					return false;
-			}
-			return true;
-	}
+		boolean f = true;
+		if(n%2==0)
+			return false;
+		for(long i=3;i*i<=n;i=i+2)
+		{
+			if(n%i==0)
+				return false;
+		}
+		return f;
+		
+}
 }
